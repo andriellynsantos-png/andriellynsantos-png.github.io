@@ -18,3 +18,18 @@ if ("IntersectionObserver" in window) {
   }, { threshold: 0.12 });
   document.querySelectorAll("section:not(.hero)").forEach(s => { s.classList.add("hidden"); obs.observe(s); });
 }
+
+let cliquesNaFoto = 0;
+const fotoPerfil = document.getElementById('foto-perfil');
+
+if (fotoPerfil) {
+  fotoPerfil.style.cursor = 'pointer';
+  fotoPerfil.addEventListener('click', () => {
+    cliquesNaFoto++;
+    if (cliquesNaFoto > 3) {
+      fotoPerfil.src = 'assets/ratinho.jpg';
+      fotoPerfil.alt = 'Um ratinho apareceu!';
+      fotoPerfil.classList.add('susto-ratinho');
+    }
+  });
+}

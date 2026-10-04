@@ -27,7 +27,7 @@ if (fotoPerfil) {
   fotoPerfil.addEventListener('click', () => {
     cliquesNaFoto++;
     if (cliquesNaFoto > 3) {
-      fotoPerfil.src = 'assets/ratinho.jpg';
+      fotoPerfil.src = 'img/ratinho.jpg';
       fotoPerfil.alt = 'Um ratinho apareceu!';
       fotoPerfil.classList.add('susto-ratinho');
     }
